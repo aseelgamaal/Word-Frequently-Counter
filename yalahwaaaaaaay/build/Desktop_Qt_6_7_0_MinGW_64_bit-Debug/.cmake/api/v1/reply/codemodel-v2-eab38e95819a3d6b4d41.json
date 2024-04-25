@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-651e7ede6eb6d4df0ca1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "yalahwaaaaaaay",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "yalahwaaaaaaay::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-yalahwaaaaaaay-Debug-1aede6516b21bf970cf3.json",
+					"name" : "yalahwaaaaaaay",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "yalahwaaaaaaay_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-yalahwaaaaaaay_autogen-Debug-82a206719ea3503cde20.json",
+					"name" : "yalahwaaaaaaay_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "yalahwaaaaaaay_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-yalahwaaaaaaay_autogen_timestamp_deps-Debug-6c2182aebdb9048282a0.json",
+					"name" : "yalahwaaaaaaay_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Sara Sayed/Documents/yalahwaaaaaaay/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug",
+		"source" : "C:/Users/Sara Sayed/Documents/yalahwaaaaaaay"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
