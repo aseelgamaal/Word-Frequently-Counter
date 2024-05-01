@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include<QStringListModel>
+#include<map>
+#include <qplaintextedit.h>
+using namespace std;
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -15,9 +19,14 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+    void onTextChanged(QString text);
     ~MainWindow();
+private slots:
+    void on_pushButton_4_clicked();
 
 private:
+
     Ui::MainWindow *ui;
+    QStringListModel *model;
 };
 #endif // MAINWINDOW_H

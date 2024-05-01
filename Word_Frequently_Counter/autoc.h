@@ -8,7 +8,7 @@ using namespace std;
 class AutoC
 {
 public:
-    void autoComplete();
+    void autoComplete(string,vector<string>&finish);
     void autoCorrect();
     void findCorrect();
     string convertToAscii(string);
