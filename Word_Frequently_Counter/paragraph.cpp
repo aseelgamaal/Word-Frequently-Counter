@@ -1,11 +1,16 @@
 #include "paragraph.h"
 #include <QDebug>
 #include <algorithm>
-
+#include<set>
 Paragraph::Paragraph()
 {
 }
-
+QStringList Paragraph::splitForAuto(const QString &text,set<string>&data){
+    pargraph = text;
+    QStringList List;
+    List = pargraph.split(" ");
+    return List;
+}
 void Paragraph::CalculateFrequency(QStringList wordsList)
 {
 

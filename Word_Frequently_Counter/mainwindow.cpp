@@ -25,18 +25,21 @@ MainWindow::MainWindow(QWidget *parent)
     });
     timer.start(100);
     QListView listview;
-    // Slot to update the QLabel tex
     connect(ui->lineEdit, &QLineEdit::textChanged, this, &MainWindow::onTextChanged);
-
-
 }
 void MainWindow::onTextChanged(QString text){
-    vector<string> filter;
+    Paragraph paragraph;
+    QStringList temp = paragraph.SplitParagrah(ui->plainTextEdit->toPlainText());
+    set<string> filteredList;
+    set<string>data;
     AutoC x;
-    x.autoComplete(text.toStdString(),filter);
-    x.autoCorrect();
+    for(QString word:temp){
+        data.insert(word.toStdString());
+    }
+    x.autoComplete(text.toStdString(),filteredList,data);
+    x.autoCorrect(data);
     QStringList list;
-    for (string x : filter){
+    for (string x : filteredList){
         list.append(QString::fromStdString(x));
     }
     model = new QStringListModel(this);
