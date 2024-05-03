@@ -1,27 +1,28 @@
 #ifndef PARAGRAPH_H
 #define PARAGRAPH_H
 
-
-#include "mainwindow.h"
 #include <QString>
 #include <map>
 #include<set>
 using namespace std;
 
-class Paragraph :public QObject
+class Paragraph
 {
-    Q_OBJECT
 private:
     QString pargraph;
-    map<string,int>wordFrequency;
+
 
 public:
     Paragraph();
+    map<string,int>wordFrequency;
     QStringList splitForAuto(const QString &text,set<string>&data);
     void CalculateFrequency(QStringList wordsList);
     QStringList SplitParagrah(const QString &text);
     vector<pair<string, int>> SortByFrequency();
+    int SearchForWordFrequncy(string word);
+    int SearchForWordOrder(string word);
 
 };
+
 
 #endif // PARAGRAPH_H

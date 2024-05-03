@@ -22,7 +22,25 @@ void AutoC :: autoComplete(string text,set<string>&filteredList,set<string>&data
        }
    }
 }
-void AutoC :: autoCorrect(set<string>&dataSet){}
+string AutoC :: autoCorrect(string word,set<string>&dataset , set<string>&corrected){
+   auto it = dataset.find(word);
+    if (it != dataset.end()) {
+        return *it;
+    }
+    string suggestion;
+    int maxPrefixLength = 0;
+    for (const auto& entry : dataset) {
+        if (entry.size() > maxPrefixLength && entry.substr(0, word.size()) == word) {
+            suggestion = entry;
+            maxPrefixLength = entry.size();
+        }
+    }
+    if (!suggestion.empty()) {
+        return suggestion ;
+    } else {
+        return "word does not exist";
+    }
+}
 
 void AutoC :: findCorrect(){}
 string AutoC :: convertToAscii(string words){

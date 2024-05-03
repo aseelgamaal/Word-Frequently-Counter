@@ -28,6 +28,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         autoc.h autoc.cpp
         paragraph.h paragraph.cpp
+        files.h files.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Word_Frequently_Counter APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

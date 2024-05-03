@@ -1,11 +1,11 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include<QTimer>
-#include<qlabel>
 #include"autoc.h"
 #include<QObject>
 #include "paragraph.h"
 #include <QTableWidgetItem>
+#include"files.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -28,7 +28,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->lineEdit, &QLineEdit::textChanged, this, &MainWindow::onTextChanged);
 }
 void MainWindow::onTextChanged(QString text){
-    Paragraph paragraph;
     QStringList temp = paragraph.SplitParagrah(ui->plainTextEdit->toPlainText());
     set<string> filteredList;
     set<string>data;
@@ -37,7 +36,6 @@ void MainWindow::onTextChanged(QString text){
         data.insert(word.toStdString());
     }
     x.autoComplete(text.toStdString(),filteredList,data);
-    x.autoCorrect(data);
     QStringList list;
     for (string x : filteredList){
         list.append(QString::fromStdString(x));
@@ -45,6 +43,15 @@ void MainWindow::onTextChanged(QString text){
     model = new QStringListModel(this);
     model->setStringList(list);
     ui->listView->setModel(model);
+    set<string>corrected;
+    corrected.insert(x.autoCorrect(text.toStdString(),data,corrected));
+    QStringList correct;
+    for (string x : corrected){
+        correct.append(QString::fromStdString(x));
+    }
+    correction = new QStringListModel(this);
+    correction->setStringList(correct);
+    ui->listView->setModel(correction);
 }
 MainWindow::~MainWindow()
 {
@@ -52,20 +59,50 @@ MainWindow::~MainWindow()
 }
 void MainWindow::on_pushButton_4_clicked()
 {
-        Paragraph paragraph;
-        QStringList wordsList = paragraph.SplitParagrah(ui->plainTextEdit->toPlainText());
-        paragraph.CalculateFrequency(wordsList);
-        vector<pair<string, int>> wordFrequency =  paragraph.SortByFrequency();
-        vector<pair<string, int>> :: iterator wordsIterator;
-        ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
-        ui->tableWidget->setRowCount(wordFrequency.size());
-        int row = 0;
-        for(wordsIterator = wordFrequency.begin();wordsIterator!=wordFrequency.end();wordsIterator++ )
-        {
-            ui->tableWidget->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(wordsIterator->first)));
-            ui->tableWidget->setItem(row, 1, new QTableWidgetItem(QString::number(wordsIterator->second)));
-            row++;
-        }
+    paragraph.wordFrequency.clear();
+    QStringList wordsList = paragraph.SplitParagrah(ui->plainTextEdit->toPlainText());
+    string p =ui->plainTextEdit->toPlainText().toStdString();
+    paragraph.CalculateFrequency(wordsList);
+    vector<pair<string, int>> wordFrequency =  paragraph.SortByFrequency();
+    vector<pair<string, int>> :: iterator wordsIterator;
+    ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->tableWidget->setRowCount(wordFrequency.size());
+    int row = 0;
+    for(wordsIterator = wordFrequency.begin();wordsIterator!=wordFrequency.end();wordsIterator++ )
+    {
+        ui->tableWidget->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(wordsIterator->first)));
+        ui->tableWidget->setItem(row, 1, new QTableWidgetItem(QString::number(wordsIterator->second)));
+        row++;
+    }
+}
 
+void MainWindow::on_addButton_clicked()
+{
+    QString newText = ui->plainTextEdit->toPlainText();
+    Files::appendTextToFile(newText);
+}
+void MainWindow::on_updateButton_clicked()
+{
+    QString filePath = QFileDialog::getOpenFileName(nullptr, QObject::tr("Open File"), QString(), QObject::tr("Text Files (*.txt)"));
+    QString fileContent = Files::loadFile(filePath);
+    ui->plainTextEdit->setPlainText(fileContent);
+    QString updatedText = ui->plainTextEdit->toPlainText();
+    Files files;
+    files.updateFile(filePath,updatedText);
+}
+void MainWindow::on_browseButton_clicked()
+{
+    QString filePath = QFileDialog::getOpenFileName(nullptr, QObject::tr("Open File"), QString(), QObject::tr("Text Files (*.txt)"));
+    QString fileContent = Files::loadFile(filePath);
+    ui->plainTextEdit->setPlainText(fileContent);
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    string word = ui->lineEdit->text().toStdString();
+    int frequency = paragraph.SearchForWordFrequncy(word);
+    ui->label_4->setText(QString::number(frequency));
+    int order = paragraph.SearchForWordOrder(word);
+    ui->label_5->setText(QString::number(order));
 }
 

@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
         }
     }
     MainWindow w;
+    QString appTitle("Word Frequently Count");
+    w.setWindowTitle(appTitle);
     w.show();
     return a.exec();
 }

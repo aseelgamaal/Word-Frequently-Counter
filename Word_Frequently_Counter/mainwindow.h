@@ -1,9 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include"paragraph.h"
 #include <QMainWindow>
 #include<QStringListModel>
 #include<map>
+#include<set>
 #include <qplaintextedit.h>
 using namespace std;
 
@@ -20,13 +21,24 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     void onTextChanged(QString text);
+   void onTextChanged1(QString text);
+
     ~MainWindow();
 private slots:
     void on_pushButton_4_clicked();
 
-private:
+    void on_browseButton_clicked();
 
+    void on_addButton_clicked();
+
+    void on_updateButton_clicked();
+
+    void on_pushButton_3_clicked();
+
+private:
+    Paragraph paragraph;
     Ui::MainWindow *ui;
     QStringListModel *model;
+    QStringListModel *correction;
 };
 #endif // MAINWINDOW_H
