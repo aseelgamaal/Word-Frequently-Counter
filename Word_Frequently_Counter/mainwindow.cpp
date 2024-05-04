@@ -10,9 +10,6 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-
-
-
     ui->setupUi(this);
     QTimer timer;
     QString final;
@@ -47,7 +44,7 @@ void MainWindow::onTextChanged(QString text){
     model->setStringList(list);
     ui->listView->setModel(model);
     set<string>corrected;
-    corrected.insert(x.autoCorrect(text.toStdString(),data,corrected));
+    x.autoCorrect(text.toStdString(),data,corrected);
     QStringList correct;
     for (string x : corrected){
         correct.append(QString::fromStdString(x));
@@ -62,7 +59,6 @@ MainWindow::~MainWindow()
 }
 void MainWindow::on_pushButton_4_clicked()
 {
-
     paragraph.wordTotalFrequency.clear();
     paragraph.wordFrequency.clear();
     QString paragraphText =ui->plainTextEdit->toPlainText();
