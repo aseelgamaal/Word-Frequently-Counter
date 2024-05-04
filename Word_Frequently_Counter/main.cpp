@@ -1,8 +1,13 @@
 #include "mainwindow.h"
-
+#include "files.h"
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
+#include <QDir>
+#include <QFile>
+#include <QFileInfo>
+#include <QTextStream>
+#include <QStringList>
 
 int main(int argc, char *argv[])
 {
@@ -17,7 +22,10 @@ int main(int argc, char *argv[])
             break;
         }
     }
+
     MainWindow w;
+
+
     QString appTitle("Word Frequently Count");
     w.setWindowTitle(appTitle);
     w.show();

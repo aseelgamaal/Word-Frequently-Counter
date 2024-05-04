@@ -10,6 +10,9 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
+
+
     ui->setupUi(this);
     QTimer timer;
     QString final;
@@ -59,20 +62,36 @@ MainWindow::~MainWindow()
 }
 void MainWindow::on_pushButton_4_clicked()
 {
+
+    paragraph.wordTotalFrequency.clear();
     paragraph.wordFrequency.clear();
-    QStringList wordsList = paragraph.SplitParagrah(ui->plainTextEdit->toPlainText());
-    string p =ui->plainTextEdit->toPlainText().toStdString();
+    QString paragraphText =ui->plainTextEdit->toPlainText();
+    QStringList wordsList = paragraph.SplitParagrah(paragraphText);
     paragraph.CalculateFrequency(wordsList);
-    vector<pair<string, int>> wordFrequency =  paragraph.SortByFrequency();
-    vector<pair<string, int>> :: iterator wordsIterator;
+    vector<pair<string, int>> wordFrequency =  paragraph.SortByFrequency(1);
+    QString allParagraph =Files::readAllParagraphs()+paragraphText;
+    QStringList allParagraphList= paragraph.SplitParagrah(allParagraph);
+    paragraph.CalculateGlobalFrequency(allParagraphList);
+    vector<pair<string, int>> wordTotalFrequency =  paragraph.SortByFrequency(2);
+
     ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableWidget->setRowCount(wordFrequency.size());
+
+    ui->tableWidget_2->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->tableWidget_2->setRowCount(wordFrequency.size());
     int row = 0;
-    for(wordsIterator = wordFrequency.begin();wordsIterator!=wordFrequency.end();wordsIterator++ )
+    int row1 = 0;
+    for(auto &wordsIterator : wordFrequency)
     {
-        ui->tableWidget->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(wordsIterator->first)));
-        ui->tableWidget->setItem(row, 1, new QTableWidgetItem(QString::number(wordsIterator->second)));
+        ui->tableWidget->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(wordsIterator.first)));
+        ui->tableWidget->setItem(row, 1, new QTableWidgetItem(QString::number(wordsIterator.second)));
         row++;
+    }
+    for(auto &wordsIterator : wordTotalFrequency)
+    {
+        ui->tableWidget_2->setItem(row1, 0, new QTableWidgetItem(QString::fromStdString(wordsIterator.first)));
+        ui->tableWidget_2->setItem(row1, 1, new QTableWidgetItem(QString::number(wordsIterator.second)));
+        row1++;
     }
 }
 

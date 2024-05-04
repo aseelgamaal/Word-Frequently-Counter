@@ -2,6 +2,8 @@
 #include <QFile>
 #include <QTextStream>
 #include <QFileDialog>
+#include <QDirIterator>
+#include <QApplication>
 
 void Files::appendTextToFile(const QString& text) {
     QString filename = "paragraph_" + QDateTime::currentDateTime().toString("yyyyMMdd_hhmmss") + ".txt";
@@ -43,3 +45,41 @@ void Files::updateFile(const QString& filename, const QString& newText) {
         file.remove();
     }
 }
+
+QString Files::readAllParagraphs()
+{
+    QString projectDirPath = QApplication::applicationDirPath();
+
+    if (projectDirPath.isEmpty()) {
+        qWarning() << "Failed to get project directory path.";
+    }
+
+    QDir projectDir(projectDirPath);
+
+
+    QStringList filters = {"paragraph*.txt", ".dat"};
+    QStringList textFiles = projectDir.entryList(filters, QDir::Files);
+    QString allParagraph="";
+
+    foreach (const QString &fileName, textFiles) {
+        QString filePath = projectDir.filePath(fileName);
+        QFile file(filePath);
+
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            qWarning() << "Failed to open file:" << filePath;
+            continue;
+        }
+
+        QTextStream in(&file);
+        QString line="";
+
+        while (!in.atEnd()) {
+            line += in.readLine();
+            line+=" ";
+        }
+        allParagraph+=line;
+        file.close();
+    }
+    return allParagraph;
+}
+

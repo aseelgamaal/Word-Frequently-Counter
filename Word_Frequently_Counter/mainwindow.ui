@@ -18,6 +18,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="accessories-dictionary"/>
+  </property>
   <property name="styleSheet">
    <string notr="true"/>
   </property>
@@ -25,7 +28,7 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>960</x>
+      <x>1080</x>
       <y>410</y>
       <width>181</width>
       <height>41</height>
@@ -35,9 +38,9 @@
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>980</x>
+      <x>920</x>
       <y>60</y>
-      <width>201</width>
+      <width>271</width>
       <height>281</height>
      </rect>
     </property>
@@ -46,6 +49,9 @@
       <pointsize>12</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustIgnored</enum>
     </property>
     <column>
      <property name="text">
@@ -81,7 +87,7 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>1150</x>
+      <x>1270</x>
       <y>410</y>
       <width>51</width>
       <height>41</height>
@@ -94,7 +100,7 @@
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>960</x>
+      <x>1080</x>
       <y>350</y>
       <width>241</width>
       <height>51</height>
@@ -113,7 +119,7 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>960</x>
+      <x>1080</x>
       <y>520</y>
       <width>241</width>
       <height>91</height>
@@ -177,7 +183,7 @@
    <widget class="QListView" name="listView">
     <property name="geometry">
      <rect>
-      <x>960</x>
+      <x>1080</x>
       <y>450</y>
       <width>181</width>
       <height>61</height>
@@ -193,7 +199,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -302,6 +308,35 @@
      </item>
     </layout>
    </widget>
+   <widget class="QTableWidget" name="tableWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>60</y>
+      <width>261</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustIgnored</enum>
+    </property>
+    <column>
+     <property name="text">
+      <string>Word</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Total Frequency</string>
+     </property>
+    </column>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -309,7 +344,7 @@
      <x>0</x>
      <y>0</y>
      <width>1800</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

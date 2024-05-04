@@ -10,6 +10,7 @@ public:
     static void appendTextToFile(const QString& text);
     static QString loadFile(const QString& filepath);
     static void updateFile(const QString& filename, const QString& newText);
+    static QString readAllParagraphs();
 };
 
 #endif // FILES_H

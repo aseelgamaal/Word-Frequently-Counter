@@ -42,17 +42,26 @@ bool cmp(pair<string, int>& word1, pair<string, int>& word2)
     return word1.second > word2.second;
 }
 
-vector<pair<string, int>> Paragraph::SortByFrequency()
+vector<pair<string, int>> Paragraph::SortByFrequency(int choice)
 {
     vector<pair<string, int>> SortedVector;
-
-    for (auto& it : wordFrequency)
+    if(choice==1)
     {
-        SortedVector.push_back(it);
+        for (auto& it : wordFrequency)
+        {
+           SortedVector.push_back(it);
+        }
+    }
+    else
+    {
+        for (auto& it : wordTotalFrequency)
+        {
+            SortedVector.push_back(it);
+        }
     }
     sort(SortedVector.begin(), SortedVector.end(), cmp);
-
     return SortedVector;
+
 }
 int Paragraph::SearchForWordFrequncy(string word)
 {
@@ -69,7 +78,7 @@ int Paragraph::SearchForWordFrequncy(string word)
 
 int Paragraph::SearchForWordOrder(string word)
 {
-    vector<pair<string, int>>SortedVector = SortByFrequency();
+    vector<pair<string, int>>SortedVector = SortByFrequency(1);
     string lowerWord = "";
     foreach (char ch, word)
     {
@@ -84,4 +93,20 @@ int Paragraph::SearchForWordOrder(string word)
         }
     }
     return 0;
+}
+
+void Paragraph::CalculateGlobalFrequency(QStringList wordsList)
+{
+    foreach(QString item, wordsList)
+    {
+        string word = item.toStdString();
+        string lowerWord = "";
+        foreach (char ch, word)
+        {
+            lowerWord += tolower(ch);
+        }
+        if(wordFrequency.find(lowerWord)!=wordFrequency.end())
+           wordTotalFrequency[lowerWord]++;
+    }
+
 }
