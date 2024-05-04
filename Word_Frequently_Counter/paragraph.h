@@ -23,6 +23,7 @@ public:
     int SearchForWordFrequncy(string word);
     int SearchForWordOrder(string word);
     void CalculateGlobalFrequency(QStringList wordsList);
+    void splitText(const QString &text,vector<int>&,vector<float>&);
 
 };
 

@@ -25,7 +25,7 @@ void AutoC :: autoComplete(string text,set<string>&filteredList,set<string>&data
 void AutoC :: autoCorrect(string word,set<string>&dataset , set<string>&corrected){
     int maxPrefixLength = 0;
     bool check=false;
-    for (const auto& entry : dataset) {
+    for ( auto entry : dataset) {
         if (entry.size() > maxPrefixLength && entry.substr(0, word.size()) == word) {
             check=true;
             corrected.insert(entry);

@@ -89,6 +89,15 @@ void MainWindow::on_pushButton_4_clicked()
         ui->tableWidget_2->setItem(row1, 1, new QTableWidgetItem(QString::number(wordsIterator.second)));
         row1++;
     }
+    vector<int>counter;
+    vector<float>rsTime;
+    paragraph.splitText(paragraphText,counter,rsTime);
+    ui->label_7->setText(QString::number(counter[0]));
+    ui->label_15->setText(QString::number(rsTime[0]/200) + " min");
+    ui->label_17->setText(QString::number(rsTime[1]/150) + " min");
+    ui->label_9->setText(QString::number(counter[1]));
+    ui->label_11->setText(QString::number(counter[2]));
+    ui->label_13->setText(QString::number(counter[3]));
 }
 
 void MainWindow::on_addButton_clicked()
