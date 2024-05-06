@@ -189,8 +189,14 @@
       <height>81</height>
      </rect>
     </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
     <property name="showDropIndicator" stdset="0">
      <bool>false</bool>
+    </property>
+    <property name="dragEnabled">
+     <bool>true</bool>
     </property>
     <property name="alternatingRowColors">
      <bool>false</bool>
@@ -337,12 +343,12 @@
      </property>
     </column>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>1120</x>
       <y>350</y>
-      <width>251</width>
+      <width>261</width>
       <height>311</height>
      </rect>
     </property>

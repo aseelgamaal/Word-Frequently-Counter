@@ -6,6 +6,7 @@
 #include "paragraph.h"
 #include <QTableWidgetItem>
 #include"files.h"
+#include"form.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -26,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     timer.start(100);
     QListView listview;
     connect(ui->lineEdit, &QLineEdit::textChanged, this, &MainWindow::onTextChanged);
+    listview.setSelectionMode(QAbstractItemView::MultiSelection);
 }
 void MainWindow::onTextChanged(QString text){
     QStringList temp = paragraph.SplitParagrah(ui->plainTextEdit->toPlainText());
@@ -43,15 +45,7 @@ void MainWindow::onTextChanged(QString text){
     model = new QStringListModel(this);
     model->setStringList(list);
     ui->listView->setModel(model);
-    set<string>corrected;
-    x.autoCorrect(text.toStdString(),data,corrected);
-    QStringList correct;
-    for (string x : corrected){
-        correct.append(QString::fromStdString(x));
-    }
-    correction = new QStringListModel(this);
-    correction->setStringList(correct);
-    ui->listView->setModel(correction);
+
 }
 MainWindow::~MainWindow()
 {
@@ -123,10 +117,35 @@ void MainWindow::on_browseButton_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
+    QStringList temp = paragraph.SplitParagrah(ui->plainTextEdit->toPlainText());
+    set<string>data;
+    for(QString word:temp){
+        data.insert(word.toStdString());
+    }
+    AutoC x;
     string word = ui->lineEdit->text().toStdString();
     int frequency = paragraph.SearchForWordFrequncy(word);
     ui->label_4->setText(QString::number(frequency));
     int order = paragraph.SearchForWordOrder(word);
     ui->label_5->setText(QString::number(order));
+    set<string>corrected;
+    x.autoCorrect(word,data,corrected);
+    QStringList correct;
+    for (string x : corrected){
+        correct.append(QString::fromStdString(x));
+    }
+    // Create a new SecondWindow instance
+    Form *secondWindow = new Form();
+    // Populate the list view in the second window with corrected words
+    secondWindow->setCorrectedWords(correct);
+    //ui->lineEdit->setText(secondWindow->on_listView_clicked());
+    // Show the second window
+    secondWindow->show();
+
+}
+void MainWindow::on_listView_clicked(const QModelIndex &index)
+{
+    QString selectedWord = index.data().toString();
+    ui->lineEdit->setText(selectedWord);
 }
 

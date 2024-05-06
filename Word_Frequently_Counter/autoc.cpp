@@ -7,7 +7,6 @@ using namespace std;
 map<string,int>mp;
 AutoC::AutoC() {}
 void AutoC :: autoComplete(string text,set<string>&filteredList,set<string>&dataSet){
-    //set<string> dataSet;
     string pattern;
    for (int i = 0; i < text.length(); i++) {
        pattern += text[i];
@@ -23,20 +22,18 @@ void AutoC :: autoComplete(string text,set<string>&filteredList,set<string>&data
    }
 }
 void AutoC :: autoCorrect(string word,set<string>&dataset , set<string>&corrected){
-    int maxPrefixLength = 0;
-    bool check=false;
-    for ( auto entry : dataset) {
-        if (entry.size() > maxPrefixLength && entry.substr(0, word.size()) == word) {
-            check=true;
-            corrected.insert(entry);
-            maxPrefixLength = entry.size();
-        }
+     if(!word.empty()){
+      for (auto x : dataset){
+          int counter = 0;
+         int  minLength = min(word.size(), x.size());
+          for (int i = 0; i < minLength; i++){
+              if(word[i] == x[i]){
+                  counter++;
+              }
+          }
+          if (counter >= minLength - 1 && counter >= word.size() - 1) {
+              corrected.insert(x);
+          }
+      }
     }
-    if(!check)
-        corrected.insert("word does not exist");
-   /* if (!suggestion.empty()) {
-        return suggestion ;
-    } /*else {
-        return "word does not exist";
-    }*/
 }

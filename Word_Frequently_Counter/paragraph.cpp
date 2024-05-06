@@ -37,7 +37,7 @@ void Paragraph::splitText(const QString &text,vector<int>&counter,vector<float>&
     counter.push_back(List.size());
     counter.push_back(0);
     for(const auto x:List){
-        counter[1]+=x.size();
+        counter[1]+=(x.size()+1);
     }
     List = pargraph.split(".");
     counter.push_back(List.size());

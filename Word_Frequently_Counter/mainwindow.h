@@ -35,10 +35,11 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_listView_clicked(const QModelIndex &index);
+
 private:
     Paragraph paragraph;
     Ui::MainWindow *ui;
     QStringListModel *model;
-    QStringListModel *correction;
 };
 #endif // MAINWINDOW_H
