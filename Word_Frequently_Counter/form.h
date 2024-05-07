@@ -17,8 +17,7 @@ public:
     void setCorrectedWords(const QStringList &correctedWords);
     void on_backButton_clicked();
 
-    QString on_listView_clicked(const QModelIndex &index);
-
+    void on_listView_clicked(const QModelIndex &index);
 private:
     Ui::Form *ui;
     QStringListModel *correction;

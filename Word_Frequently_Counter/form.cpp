@@ -20,20 +20,19 @@ void Form::setCorrectedWords(const QStringList &correctedWords)
     correction = new QStringListModel(this);
     correction->setStringList(correctedWords);
     ui->listView->setModel(correction);
-
+    ui->listView->setSelectionMode(QAbstractItemView::MultiSelection);
 }
-
 void Form::on_backButton_clicked()
 {
     MainWindow *mainWindow = new MainWindow;
     mainWindow->show();
-   // this->hide();
+   //
 
 }
-
-QString Form::on_listView_clicked(const QModelIndex &index)
+void Form::on_listView_clicked(const QModelIndex &index)
 {
     QString selectedWord = index.data().toString();
-   return selectedWord;
+    MainWindow::output = selectedWord;
+    this->hide();
 }
 

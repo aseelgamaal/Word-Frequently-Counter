@@ -21,8 +21,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     void onTextChanged(QString text);
-   void onTextChanged1(QString text);
-
+    void checkAndProcessText(QString);
+    static QString output;
     ~MainWindow();
 private slots:
     void on_pushButton_4_clicked();
@@ -36,10 +36,12 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_listView_clicked(const QModelIndex &index);
+    void on_plainTextEdit_textChanged();
 
 private:
     Paragraph paragraph;
     Ui::MainWindow *ui;
     QStringListModel *model;
+    QStringListModel *modelplan;
 };
 #endif // MAINWINDOW_H
