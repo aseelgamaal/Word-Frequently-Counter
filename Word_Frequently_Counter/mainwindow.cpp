@@ -82,23 +82,30 @@ void MainWindow::on_pushButton_4_clicked(){
 }
 void MainWindow::on_addButton_clicked()
 {
+    QString fileName = ui->lineEdit_2->text();
     QString newText = ui->plainTextEdit->toPlainText();
-    Files::appendTextToFile(newText);
+    Files::appendTextToFile(newText, fileName);
 }
+
+void MainWindow::on_browseButton_clicked(){
+    filePath = QFileDialog::getOpenFileName(nullptr, QObject::tr("Open File"), QString(), QObject::tr("Text Files (*.txt)"));
+    QString fileContent = Files::loadFile(filePath);
+    ui->plainTextEdit->setPlainText(fileContent);
+}
+
 void MainWindow::on_updateButton_clicked()
 {
-    QString filePath = QFileDialog::getOpenFileName(nullptr, QObject::tr("Open File"), QString(), QObject::tr("Text Files (*.txt)"));
-    QString fileContent = Files::loadFile(filePath);
-    ui->plainTextEdit->setPlainText(fileContent);
-    QString updatedText = ui->plainTextEdit->toPlainText();
     Files files;
+    if (filePath.isEmpty()) {
+        on_browseButton_clicked();
+        if (filePath.isEmpty()) {
+            return;
+        }
+    }
+    QString updatedText = ui->plainTextEdit->toPlainText();
     files.updateFile(filePath,updatedText);
 }
-void MainWindow::on_browseButton_clicked(){
-    QString filePath = QFileDialog::getOpenFileName(nullptr, QObject::tr("Open File"), QString(), QObject::tr("Text Files (*.txt)"));
-    QString fileContent = Files::loadFile(filePath);
-    ui->plainTextEdit->setPlainText(fileContent);
-}
+
 void MainWindow::on_pushButton_3_clicked()
 {
     string word = ui->lineEdit->text().toStdString();
@@ -154,3 +161,9 @@ void MainWindow::on_plainTextEdit_textChanged()
     modelplan->setStringList(list);
     ui->listView_2->setModel(modelplan);
 }
+
+void MainWindow::on_translateButton_clicked()
+{
+
+}
+

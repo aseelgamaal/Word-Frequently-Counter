@@ -33,6 +33,8 @@ private slots:
 
     void on_updateButton_clicked();
 
+    void on_translateButton_clicked();
+
     void on_pushButton_3_clicked();
 
     void on_listView_clicked(const QModelIndex &index);
@@ -43,5 +45,6 @@ private:
     Ui::MainWindow *ui;
     QStringListModel *model;
     QStringListModel *modelplan;
+    QString filePath;
 };
 #endif // MAINWINDOW_H

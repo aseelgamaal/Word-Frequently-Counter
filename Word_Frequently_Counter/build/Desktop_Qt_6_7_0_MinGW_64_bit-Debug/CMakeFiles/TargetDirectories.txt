@@ -1,0 +1,9 @@
+C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/Word_Frequently_Counter.dir
+C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/Word_Frequently_Counter_autogen_timestamp_deps.dir
+C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/Word_Frequently_Counter_autogen.dir

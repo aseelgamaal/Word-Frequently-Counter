@@ -5,9 +5,12 @@
 #include <QDirIterator>
 #include <QApplication>
 
-void Files::appendTextToFile(const QString& text) {
-    QString filename = "paragraph_" + QDateTime::currentDateTime().toString("yyyyMMdd_hhmmss") + ".txt";
-    QFile file(filename);
+void Files::appendTextToFile(const QString& text, const QString& fileName) {
+    QString fileNameText= fileName + ".txt";
+    if(fileNameText==".txt"){
+        fileNameText="paragraph_" + QDateTime::currentDateTime().toString("yyyyMMdd_hhmmss") + ".txt";
+    }
+    QFile file(fileNameText);
     if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream out(&file);
         out << text;
@@ -42,7 +45,6 @@ void Files::updateFile(const QString& filename, const QString& newText) {
         } else {
             qDebug() << "Failed to open file for writing";
         }
-        file.remove();
     }
 }
 

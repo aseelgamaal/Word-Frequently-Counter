@@ -7,7 +7,7 @@
 
 class Files {
 public:
-    static void appendTextToFile(const QString& text);
+    static void appendTextToFile(const QString& text, const QString& fileName);
     static QString loadFile(const QString& filepath);
     static void updateFile(const QString& filename, const QString& newText);
     static QString readAllParagraphs();

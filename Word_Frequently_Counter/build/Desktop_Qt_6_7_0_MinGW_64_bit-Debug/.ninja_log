@@ -1,0 +1,99 @@
+# ninja log v5
+902	5311	7368720148484981	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+9	79	7368721451422603	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+18	892	7368720103794550	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+18	892	7368720103794550	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+965	4542	7368698249895872	CMakeFiles/Word_Frequently_Counter.dir/paragraph.cpp.obj	b835441f23dc554c
+18	892	7368720103794550	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+222	3681	7368717265918015	CMakeFiles/Word_Frequently_Counter.dir/files.cpp.obj	816511fa0a6df3bf
+18	892	7368720103794550	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+952	2135	7368698225830260	CMakeFiles/Word_Frequently_Counter.dir/autoc.cpp.obj	85f84a5ba459d5fb
+895	4655	7368720141892613	CMakeFiles/Word_Frequently_Counter.dir/Word_Frequently_Counter_autogen/mocs_compilation.cpp.obj	30112da658e7c61c
+893	5300	7368720148375261	CMakeFiles/Word_Frequently_Counter.dir/main.cpp.obj	cd7e2802cd33881a
+898	6212	7368720157470928	CMakeFiles/Word_Frequently_Counter.dir/mainwindow.cpp.obj	2e273f13a7c2f1f8
+6212	6924	7368720164661709	Word_Frequently_Counter.exe	a2b6ae443b9d0123
+346	1669	7368721460498138	build.ninja	ed582761274ada94
+79	1072	7368721460498138	build.ninja	ed582761274ada94
+8	114	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+26	219	7368721465275366	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+26	219	7368721465275366	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+26	219	7368721465275366	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+26	219	7368721465275366	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+234	3948	7368721502455896	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+237	4740	7368721510364994	CMakeFiles/Word_Frequently_Counter.dir/mainwindow.cpp.obj	2e273f13a7c2f1f8
+4741	5422	7368721517246311	Word_Frequently_Counter.exe	a2b6ae443b9d0123
+7	75	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+21	194	7368723599499971	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+21	194	7368723599499971	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+21	194	7368723599499971	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+21	194	7368723599499971	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+220	3696	7368723634426530	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+6	77	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+21	218	7368724073097779	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+21	218	7368724073097779	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+21	218	7368724073097779	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+21	218	7368724073097779	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+237	3665	7368724107455856	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+234	4696	7368724117758283	CMakeFiles/Word_Frequently_Counter.dir/mainwindow.cpp.obj	2e273f13a7c2f1f8
+4696	5376	7368724124609956	Word_Frequently_Counter.exe	a2b6ae443b9d0123
+4	76	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+18	238	7368732978473767	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+18	238	7368732978473767	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+18	238	7368732978473767	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+18	238	7368732978473767	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+256	3235	7368733008333874	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+253	3989	7368733015854073	CMakeFiles/Word_Frequently_Counter.dir/mainwindow.cpp.obj	2e273f13a7c2f1f8
+3989	4677	7368733022795185	Word_Frequently_Counter.exe	a2b6ae443b9d0123
+6	71	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+17	239	7368739419883340	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+17	239	7368739419883340	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+17	239	7368739419883340	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+17	239	7368739419883340	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+256	4504	7368739462429478	CMakeFiles/Word_Frequently_Counter.dir/main.cpp.obj	cd7e2802cd33881a
+261	4514	7368739462519519	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+6	84	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+17	204	7368739938092807	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+17	204	7368739938092807	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+17	204	7368739938092807	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+17	204	7368739938092807	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+222	3594	7368739971882156	CMakeFiles/Word_Frequently_Counter.dir/files.cpp.obj	816511fa0a6df3bf
+226	4148	7368739977417340	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+219	5143	7368739987340801	CMakeFiles/Word_Frequently_Counter.dir/mainwindow.cpp.obj	2e273f13a7c2f1f8
+5144	5854	7368739994531829	Word_Frequently_Counter.exe	a2b6ae443b9d0123
+5	72	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+18	196	7368742074091474	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+18	196	7368742074091474	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+18	196	7368742074091474	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+18	196	7368742074091474	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+213	3306	7368742105078560	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+210	4114	7368742113137377	CMakeFiles/Word_Frequently_Counter.dir/mainwindow.cpp.obj	2e273f13a7c2f1f8
+4115	4760	7368742119640682	Word_Frequently_Counter.exe	a2b6ae443b9d0123
+5	72	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+18	186	7368745312810385	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+18	186	7368745312810385	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+18	186	7368745312810385	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+18	186	7368745312810385	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+207	3668	7368745347517277	CMakeFiles/Word_Frequently_Counter.dir/files.cpp.obj	816511fa0a6df3bf
+204	4163	7368745352474035	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+201	5123	7368745362048407	CMakeFiles/Word_Frequently_Counter.dir/mainwindow.cpp.obj	2e273f13a7c2f1f8
+5123	5764	7368745368531377	Word_Frequently_Counter.exe	a2b6ae443b9d0123
+5	70	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+17	184	7368768056505336	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+17	184	7368768056505336	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+17	184	7368768056505336	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+17	184	7368768056505336	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+203	3278	7368768087332562	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+5	74	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+5	69	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+5	71	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+4	67	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+5	77	0	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	f3e1dbe4f90cd25c
+10	873	7368770665183912	Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+10	873	7368770665183912	Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+10	873	7368770665183912	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/timestamp	e1babb95604831eb
+10	873	7368770665183912	C:/Users/aseel/Desktop/uni/second year/ds/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp	e1babb95604831eb
+877	4684	7368770703930234	CMakeFiles/Word_Frequently_Counter.dir/Word_Frequently_Counter_autogen/mocs_compilation.cpp.obj	30112da658e7c61c
+874	5504	7368770712148246	CMakeFiles/Word_Frequently_Counter.dir/main.cpp.obj	cd7e2802cd33881a
+884	5524	7368770712317791	CMakeFiles/Word_Frequently_Counter.dir/form.cpp.obj	920f4d00e60f0712
+881	6515	7368770722251543	CMakeFiles/Word_Frequently_Counter.dir/mainwindow.cpp.obj	2e273f13a7c2f1f8
+6516	7198	7368770729143115	Word_Frequently_Counter.exe	a2b6ae443b9d0123
