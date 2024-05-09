@@ -10,7 +10,7 @@ class AutoC
 {
 public:
     void autoComplete(string,set<string>&finish,set<string>&);
-    void autoCorrect(string word,set<string>&dataset , set<string>&corrected);
+    void autoCorrect(string word,set<string>&dataset ,string&corrected);
     AutoC();
 };
 

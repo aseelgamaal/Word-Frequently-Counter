@@ -31,7 +31,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         autoc.h autoc.cpp
         paragraph.h paragraph.cpp
         files.h files.cpp
-        form.h form.cpp form.ui
+        correctpage.h correctpage.cpp correctpage.ui
+
 
 
 

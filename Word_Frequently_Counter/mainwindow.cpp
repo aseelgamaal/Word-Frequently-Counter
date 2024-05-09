@@ -6,13 +6,13 @@
 #include "paragraph.h"
 #include <QTableWidgetItem>
 #include"files.h"
-#include"form.h"
+#include"correctpage.h"
 QString MainWindow::output;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    Form ss;
+
     ui->setupUi(this);
     QListView listview;
     connect(ui->lineEdit, &QLineEdit::textChanged, this, &MainWindow::onTextChanged);
@@ -74,8 +74,6 @@ void MainWindow::on_pushButton_4_clicked(){
     vector<float>rsTime;
     paragraph.splitText(paragraphText,counter,rsTime);
     ui->label_7->setText(QString::number(counter[0]));
-    ui->label_15->setText(QString::number(rsTime[0]/200) + " min");
-    ui->label_17->setText(QString::number(rsTime[1]/150) + " min");
     ui->label_9->setText(QString::number(counter[1]));
     ui->label_11->setText(QString::number(counter[2]));
     ui->label_13->setText(QString::number(counter[3]));
@@ -113,53 +111,22 @@ void MainWindow::on_pushButton_3_clicked()
     ui->label_4->setText(QString::number(frequency));
     int order = paragraph.SearchForWordOrder(word);
     ui->label_5->setText(QString::number(order));
+
     if(frequency == 0 && order == 0)
     {
         QStringList temp = paragraph.SplitParagrah(ui->plainTextEdit->toPlainText());
-        set<string>data;
-        for(QString word:temp){
-            data.insert(word.toStdString());
-        }
-        AutoC x;
-        set<string>corrected;
-        x.autoCorrect(word,data,corrected);
-        QStringList correct;
-        for (string x : corrected){
-            correct.append(QString::fromStdString(x));
-        }
-        // Create a new SecondWindow instance
-        Form *secondWindow = new Form();
-        // Populate the list view in the second window with corrected words
-        // Show the second window
+
+        CorrectPage *secondWindow = new CorrectPage();
+      //  secondWindow->getWord(corrected);
+        secondWindow->temporary(temp,word);
         secondWindow->show();
-        secondWindow->setCorrectedWords(correct);
-        ui->lineEdit->setText(output);
+        ui->lineEdit->setText(secondWindow->setWord());
     }
 }
 void MainWindow::on_listView_clicked(const QModelIndex &index)
 {
     QString selectedWord = index.data().toString();
     ui->lineEdit->setText(selectedWord);
-}
-void MainWindow::on_plainTextEdit_textChanged()
-{
-    set<string>data;
-    set<string> filteredList;
-    AutoC x;
-    QString paragraphText =ui->plainTextEdit->toPlainText();
-    QString allParagraph =Files::readAllParagraphs()+paragraphText;
-    QStringList allParagraphList= paragraph.SplitParagrah(allParagraph);
-    for(QString word:allParagraphList){
-        data.insert(word.toStdString());
-    }
-    x.autoComplete(paragraphText.toStdString(),filteredList,data);
-    QStringList list;
-    for (string x : filteredList){
-        list.append(QString::fromStdString(x));
-    }
-    modelplan = new QStringListModel(this);
-    modelplan->setStringList(list);
-    ui->listView_2->setModel(modelplan);
 }
 
 void MainWindow::on_translateButton_clicked()

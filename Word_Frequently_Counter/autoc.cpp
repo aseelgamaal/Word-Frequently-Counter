@@ -21,8 +21,11 @@ void AutoC :: autoComplete(string text,set<string>&filteredList,set<string>&data
        }
    }
 }
-void AutoC :: autoCorrect(string word,set<string>&dataset , set<string>&corrected){
+void AutoC :: autoCorrect(string word,set<string>&dataset , string &corrected){
+
+    bool found=false;
      if(!word.empty()){
+        int maxCounter = 0 ;
       for (auto x : dataset){
           int counter = 0;
          int  minLength = min(word.size(), x.size());
@@ -31,9 +34,15 @@ void AutoC :: autoCorrect(string word,set<string>&dataset , set<string>&correcte
                   counter++;
               }
           }
-          if (counter >= minLength - 1 && counter >= word.size() - 1) {
-              corrected.insert(x);
+          if (counter >= minLength - 1 && counter >= word.size() - 1 && counter >= maxCounter) {
+              found=true;
+              corrected = x;
+              maxCounter = counter;
           }
       }
+      if(!found){
+          corrected="Word not found !";
+      }
     }
+
 }
