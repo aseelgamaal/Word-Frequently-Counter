@@ -1,0 +1,8 @@
+D:/vs2022/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/Word_Frequently_Counter.dir
+D:/vs2022/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/edit_cache.dir
+D:/vs2022/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/rebuild_cache.dir
+D:/vs2022/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/list_install_components.dir
+D:/vs2022/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/install.dir
+D:/vs2022/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/install/local.dir
+D:/vs2022/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/Word_Frequently_Counter_autogen_timestamp_deps.dir
+D:/vs2022/Word-Frequantly-Counter/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/Word_Frequently_Counter_autogen.dir

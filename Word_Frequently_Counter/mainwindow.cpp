@@ -158,7 +158,20 @@ void MainWindow::on_plainTextEdit_textChanged()
 void MainWindow::on_listView_2_clicked(const QModelIndex &index)
 {
     QString selectedWord = index.data().toString();
-    ui->plainTextEdit->deleteLater();
-    ui->plainTextEdit->appendPlainText(selectedWord);
-}
 
+    QTextCursor cursor = ui->plainTextEdit->textCursor();
+    QString text = cursor.document()->toPlainText();
+
+    static const QRegularExpression separator("[a-z]+");
+    int lastSpacePosition = text.lastIndexOf(separator);
+
+    if (lastSpacePosition > -1) {
+        QString extractedText = text.left(lastSpacePosition);
+        cursor.document()->setPlainText(extractedText);
+        // Move the cursor to the end of the remaining text (optional)
+        cursor.movePosition(QTextCursor::End);
+        ui->plainTextEdit->setTextCursor(cursor);
+    }
+    ui->plainTextEdit->insertPlainText(selectedWord);
+
+}

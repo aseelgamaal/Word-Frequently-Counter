@@ -6,7 +6,7 @@
 #include <QApplication>
 
 void Files::appendTextToFile(const QString& text, const QString& fileName) {
-    QString fileNameText= fileName + ".txt";
+    QString fileNameText= fileName+"_paragraph" + ".txt";
     if(fileNameText==".txt"){
         fileNameText="paragraph_" + QDateTime::currentDateTime().toString("yyyyMMdd_hhmmss") + ".txt";
     }
@@ -59,7 +59,7 @@ QString Files::readAllParagraphs()
     QDir projectDir(projectDirPath);
 
 
-    QStringList filters = {"paragraph*.txt", ".dat"};
+    QStringList filters = {"*paragraph*.txt", ".dat"};
     QStringList textFiles = projectDir.entryList(filters, QDir::Files);
     QString allParagraph="";
 
