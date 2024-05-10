@@ -131,3 +131,34 @@ void MainWindow::on_translateButton_clicked()
 
 }
 
+void MainWindow::on_plainTextEdit_textChanged()
+{
+    set<string>data;
+    set<string> filteredList;
+    AutoC x;
+    QString paragraphText =ui->plainTextEdit->toPlainText();
+    QString allParagraph =Files::readAllParagraphs();
+    QStringList allParagraphList= paragraph.SplitParagrah(allParagraph);
+    for(QString word:allParagraphList){
+        data.insert(word.toStdString());
+    }
+    QStringList fa = paragraph.SplitParagrah(paragraphText);
+    for(auto word:fa)
+    {
+        x.autoComplete(word.toStdString(),filteredList,data);
+        QStringList list;
+        for (string x : filteredList){
+            list.append(QString::fromStdString(x));
+        }
+        modelplan = new QStringListModel(this);
+        modelplan->setStringList(list);
+        ui->listView_2->setModel(modelplan);
+    }
+}
+void MainWindow::on_listView_2_clicked(const QModelIndex &index)
+{
+    QString selectedWord = index.data().toString();
+    ui->plainTextEdit->deleteLater();
+    ui->plainTextEdit->appendPlainText(selectedWord);
+}
+
