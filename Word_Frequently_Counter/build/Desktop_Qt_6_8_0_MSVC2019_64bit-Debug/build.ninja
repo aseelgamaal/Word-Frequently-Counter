@@ -212,7 +212,7 @@ build Word_Frequently_Counter_autogen\timestamp Word_Frequently_Counter_autogen\
 #############################################
 # Phony custom command for CMakeFiles\Word_Frequently_Counter_autogen_timestamp_deps
 
-build CMakeFiles\Word_Frequently_Counter_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles\Word_Frequently_Counter_autogen_timestamp_deps: phony C$:\qt\6.8.0\msvc2019_64\.\bin\moc.exe C$:\qt\6.8.0\msvc2019_64\lib\Qt6Cored.lib C$:\qt\6.8.0\msvc2019_64\.\bin\uic.exe C$:\qt\6.8.0\msvc2019_64\lib\Qt6Widgetsd.lib
+build CMakeFiles\Word_Frequently_Counter_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles\Word_Frequently_Counter_autogen_timestamp_deps: phony C$:\qt\6.8.0\msvc2019_64\.\bin\moc.exe C$:\qt\6.8.0\msvc2019_64\.\bin\uic.exe C$:\qt\6.8.0\msvc2019_64\lib\Qt6Cored.lib C$:\qt\6.8.0\msvc2019_64\lib\Qt6Widgetsd.lib
 
 
 #############################################

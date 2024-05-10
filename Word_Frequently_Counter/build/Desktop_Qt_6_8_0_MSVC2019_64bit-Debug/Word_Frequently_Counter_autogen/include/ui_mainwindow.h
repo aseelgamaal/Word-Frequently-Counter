@@ -67,6 +67,7 @@ public:
     QPushButton *browseButton;
     QPushButton *pushButton;
     QPlainTextEdit *plainTextEdit;
+    QListView *listView_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -273,10 +274,16 @@ public:
         plainTextEdit->setGeometry(QRect(30, 70, 611, 424));
         plainTextEdit->setMinimumSize(QSize(0, 424));
         plainTextEdit->setFont(font3);
+        listView_2 = new QListView(centralwidget);
+        listView_2->setObjectName("listView_2");
+        listView_2->setGeometry(QRect(670, 160, 151, 111));
+        listView_2->setEditTriggers(QAbstractItemView::NoEditTriggers);
+        listView_2->setProperty("showDropIndicator", QVariant(false));
+        listView_2->setDragEnabled(true);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1800, 25));
+        menubar->setGeometry(QRect(0, 0, 1800, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");

@@ -41,13 +41,15 @@ QStringList Paragraph::SplitParagrah(const QString &text)
 {
     pargraph = text;
     QStringList List;
-    static const QRegularExpression separator("[,;\\.\\s:0-9]+");
+    static const QRegularExpression separator("[,;\\.\\s:0-9()\"%&^#@!*_“”+٠-٩]+");
     List = pargraph.split(separator,Qt::SkipEmptyParts);
     return List;
 }
 
 bool cmp(pair<string, int>& word1, pair<string, int>& word2)
 {
+    if(word1.second == word2.second)
+        return word1.first <word2.first;
     return word1.second > word2.second;
 }
 

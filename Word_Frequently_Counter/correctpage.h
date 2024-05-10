@@ -15,7 +15,7 @@ public:
     explicit CorrectPage(QWidget *parent = nullptr);
     void getWord(string word);
     QString setWord();
-    void temporary(QStringList&,string);
+    void get_Data(QStringList&,string);
     ~CorrectPage();
 
 private slots:
@@ -25,4 +25,4 @@ private:
     Ui::CorrectPage *ui;
 };
 
-#endif // CORRECTPAGE_H
+#endif // CORRECTPAGE_H

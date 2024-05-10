@@ -115,7 +115,7 @@ void MainWindow::on_pushButton_3_clicked()
 
         CorrectPage *secondWindow = new CorrectPage();
       //  secondWindow->getWord(corrected);
-        secondWindow->temporary(temp,word);
+        secondWindow->get_Data(temp,word);
         secondWindow->show();
         ui->lineEdit->setText(secondWindow->setWord());
     }

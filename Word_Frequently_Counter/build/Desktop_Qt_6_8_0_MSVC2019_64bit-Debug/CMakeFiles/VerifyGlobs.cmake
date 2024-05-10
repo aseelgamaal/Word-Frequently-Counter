@@ -5,6 +5,7 @@ cmake_policy(SET CMP0009 NEW)
 # _directory_contents at C:/qt/6.8.0/msvc2019_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "D:/tagrobaa/Word_Frequently_Counter/*.c")
 set(OLD_GLOB
+  "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/ShowIncludes/main.c"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_8_0_MSVC2019_64bit-Debug/CMakeFiles/ShowIncludes/main.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -47,6 +48,10 @@ set(OLD_GLOB
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/EWIEGA46WW/moc_form.cpp"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/EWIEGA46WW/moc_mainwindow.cpp"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp"
+  "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+  "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/Word_Frequently_Counter_autogen/EWIEGA46WW/moc_correctpage.cpp"
+  "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/Word_Frequently_Counter_autogen/EWIEGA46WW/moc_mainwindow.cpp"
+  "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/Word_Frequently_Counter_autogen/mocs_compilation.cpp"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_8_0_MSVC2019_64bit-Debug/CMakeFiles/3.27.7/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_8_0_MSVC2019_64bit-Debug/Word_Frequently_Counter_autogen/EWIEGA46WW/moc_correctpage.cpp"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_8_0_MSVC2019_64bit-Debug/Word_Frequently_Counter_autogen/EWIEGA46WW/moc_form.cpp"
@@ -80,6 +85,9 @@ set(OLD_GLOB
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/include/ui_form.h"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/include/ui_mainwindow.h"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Word_Frequently_Counter_autogen/moc_predefs.h"
+  "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/CMakeFiles/ShowIncludes/foo.h"
+  "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/Word_Frequently_Counter_autogen/include/ui_correctpage.h"
+  "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_7_1_MSVC2019_64bit-Debug/Word_Frequently_Counter_autogen/include/ui_mainwindow.h"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_8_0_MSVC2019_64bit-Debug/CMakeFiles/ShowIncludes/foo.h"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_8_0_MSVC2019_64bit-Debug/Word_Frequently_Counter_autogen/include/ui_correctpage.h"
   "D:/tagrobaa/Word_Frequently_Counter/build/Desktop_Qt_6_8_0_MSVC2019_64bit-Debug/Word_Frequently_Counter_autogen/include/ui_form.h"

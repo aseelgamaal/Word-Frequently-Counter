@@ -18,7 +18,7 @@ void CorrectPage::getWord(string word){
     ui->lineEdit->setText(QString::fromStdString(word));
 }
 
-void CorrectPage::temporary(QStringList& text ,string word){
+void CorrectPage::get_Data(QStringList& text ,string word){
     set<string>data;
     for(QString word:text){
         data.insert(word.toStdString());
