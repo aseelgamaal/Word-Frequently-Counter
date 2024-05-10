@@ -50,10 +50,8 @@ void MainWindow::on_pushButton_4_clicked(){
     QStringList allParagraphList= paragraph.SplitParagrah(allParagraph);
     paragraph.CalculateGlobalFrequency(allParagraphList);
     vector<pair<string, int>> wordTotalFrequency =  paragraph.SortByFrequency(2);
-
     ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableWidget->setRowCount(wordFrequency.size());
-
     ui->tableWidget_2->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableWidget_2->setRowCount(wordFrequency.size());
     int row = 0;
@@ -71,8 +69,7 @@ void MainWindow::on_pushButton_4_clicked(){
         row1++;
     }
     vector<int>counter;
-    vector<float>rsTime;
-    paragraph.splitText(paragraphText,counter,rsTime);
+    paragraph.splitText(paragraphText,counter);
     ui->label_7->setText(QString::number(counter[0]));
     ui->label_9->setText(QString::number(counter[1]));
     ui->label_11->setText(QString::number(counter[2]));

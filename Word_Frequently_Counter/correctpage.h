@@ -15,9 +15,6 @@ public:
     explicit CorrectPage(QWidget *parent = nullptr);
     void getWord(string word);
     QString setWord();
-    QString correctWord="";
-    QStringList data;
-    string searchWord;
     void temporary(QStringList&,string);
     ~CorrectPage();
 

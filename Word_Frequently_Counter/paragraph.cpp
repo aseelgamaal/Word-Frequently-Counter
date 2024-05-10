@@ -7,12 +7,6 @@
 Paragraph::Paragraph()
 {
 }
-QStringList Paragraph::splitForAuto(const QString &text,set<string>&data){
-    pargraph = text;
-    QStringList List;
-    List = pargraph.split(" ");
-    return List;
-}
 void Paragraph::CalculateFrequency(QStringList wordsList)
 {
 
@@ -27,13 +21,11 @@ void Paragraph::CalculateFrequency(QStringList wordsList)
         wordFrequency[lowerWord]++;
     }
 }
-void Paragraph::splitText(const QString &text,vector<int>&counter,vector<float>&rsTime){
+void Paragraph::splitText(const QString &text,vector<int>&counter){
     pargraph = text;
     QStringList List;
     List = pargraph.split(" ");
     int ss=List.size();
-    rsTime.push_back(200);
-    rsTime.push_back(10);
     counter.push_back(List.size());
     counter.push_back(0);
     for(const auto x:List){
