@@ -65,7 +65,6 @@ public:
     QPushButton *updateButton;
     QPushButton *addButton;
     QPushButton *browseButton;
-    QPushButton *pushButton;
     QPlainTextEdit *plainTextEdit;
     QListView *listView_2;
     QMenuBar *menubar;
@@ -86,7 +85,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(830, 420, 191, 41));
+        lineEdit->setGeometry(QRect(830, 470, 191, 41));
         tableWidget = new QTableWidget(centralwidget);
         if (tableWidget->columnCount() < 2)
             tableWidget->setColumnCount(2);
@@ -95,7 +94,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         tableWidget->setObjectName("tableWidget");
-        tableWidget->setGeometry(QRect(830, 70, 271, 281));
+        tableWidget->setGeometry(QRect(830, 70, 271, 331));
         QFont font1;
         font1.setPointSize(12);
         font1.setBold(true);
@@ -111,14 +110,14 @@ public:
         label->setFont(font2);
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(1030, 420, 71, 41));
+        pushButton_3->setGeometry(QRect(1030, 470, 71, 41));
         pushButton_4 = new QPushButton(centralwidget);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(830, 360, 271, 51));
+        pushButton_4->setGeometry(QRect(830, 410, 271, 51));
         pushButton_4->setFont(font1);
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(830, 570, 271, 91));
+        layoutWidget->setGeometry(QRect(830, 620, 271, 91));
         gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
@@ -151,7 +150,7 @@ public:
 
         listView = new QListView(centralwidget);
         listView->setObjectName("listView");
-        listView->setGeometry(QRect(830, 470, 271, 91));
+        listView->setGeometry(QRect(830, 520, 271, 91));
         listView->setEditTriggers(QAbstractItemView::NoEditTriggers);
         listView->setProperty("showDropIndicator", QVariant(false));
         listView->setDragEnabled(true);
@@ -165,12 +164,12 @@ public:
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
         tableWidget_2->setHorizontalHeaderItem(1, __qtablewidgetitem3);
         tableWidget_2->setObjectName("tableWidget_2");
-        tableWidget_2->setGeometry(QRect(1120, 70, 261, 281));
+        tableWidget_2->setGeometry(QRect(1120, 70, 261, 331));
         tableWidget_2->setFont(font1);
         tableWidget_2->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
         layoutWidget1 = new QWidget(centralwidget);
         layoutWidget1->setObjectName("layoutWidget1");
-        layoutWidget1->setGeometry(QRect(1120, 350, 261, 311));
+        layoutWidget1->setGeometry(QRect(1120, 400, 261, 311));
         verticalLayout_3 = new QVBoxLayout(layoutWidget1);
         verticalLayout_3->setObjectName("verticalLayout_3");
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
@@ -244,46 +243,42 @@ public:
 
         lineEdit_2 = new QLineEdit(centralwidget);
         lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(170, 560, 471, 41));
+        lineEdit_2->setGeometry(QRect(170, 620, 471, 41));
         label_18 = new QLabel(centralwidget);
         label_18->setObjectName("label_18");
-        label_18->setGeometry(QRect(40, 560, 131, 41));
+        label_18->setGeometry(QRect(40, 620, 131, 41));
         label_18->setFont(font3);
         updateButton = new QPushButton(centralwidget);
         updateButton->setObjectName("updateButton");
-        updateButton->setGeometry(QRect(240, 500, 191, 50));
+        updateButton->setGeometry(QRect(340, 560, 301, 50));
         updateButton->setMinimumSize(QSize(20, 50));
         updateButton->setFont(font1);
         addButton = new QPushButton(centralwidget);
         addButton->setObjectName("addButton");
-        addButton->setGeometry(QRect(30, 610, 611, 50));
+        addButton->setGeometry(QRect(30, 670, 611, 50));
         addButton->setMinimumSize(QSize(20, 50));
         addButton->setFont(font1);
         browseButton = new QPushButton(centralwidget);
         browseButton->setObjectName("browseButton");
-        browseButton->setGeometry(QRect(30, 500, 191, 50));
+        browseButton->setGeometry(QRect(30, 560, 291, 50));
         browseButton->setMinimumSize(QSize(20, 50));
         browseButton->setFont(font1);
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(450, 500, 191, 50));
-        pushButton->setMinimumSize(QSize(20, 50));
-        pushButton->setFont(font1);
         plainTextEdit = new QPlainTextEdit(centralwidget);
         plainTextEdit->setObjectName("plainTextEdit");
-        plainTextEdit->setGeometry(QRect(30, 70, 611, 424));
-        plainTextEdit->setMinimumSize(QSize(0, 424));
+        plainTextEdit->setGeometry(QRect(30, 70, 611, 381));
+        plainTextEdit->setMinimumSize(QSize(0, 350));
         plainTextEdit->setFont(font3);
         listView_2 = new QListView(centralwidget);
         listView_2->setObjectName("listView_2");
-        listView_2->setGeometry(QRect(670, 160, 151, 111));
+        listView_2->setGeometry(QRect(30, 460, 611, 91));
+        listView_2->setFont(font1);
         listView_2->setEditTriggers(QAbstractItemView::NoEditTriggers);
         listView_2->setProperty("showDropIndicator", QVariant(false));
         listView_2->setDragEnabled(true);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1800, 21));
+        menubar->setGeometry(QRect(0, 0, 1800, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -324,7 +319,6 @@ public:
         updateButton->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
         addButton->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
         browseButton->setText(QCoreApplication::translate("MainWindow", "Upload", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Translate", nullptr));
     } // retranslateUi
 
 };

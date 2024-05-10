@@ -1,6 +1,7 @@
 #include "autoc.h"
 #include<iostream>
 #include<map>
+#include <string>
 #include<vector>
 #include<set>
 using namespace std;
@@ -8,8 +9,9 @@ map<string,int>mp;
 AutoC::AutoC() {}
 void AutoC :: autoComplete(string text,set<string>&filteredList,set<string>&dataSet){
     string pattern;
+
    for (int i = 0; i < text.length(); i++) {
-       pattern += text[i];
+        pattern += tolower(text[i]);
        for (auto word:dataSet) {
            string match = word.substr(0, i+1);
            if (pattern == match) {

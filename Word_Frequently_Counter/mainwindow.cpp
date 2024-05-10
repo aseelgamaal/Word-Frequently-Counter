@@ -7,6 +7,7 @@
 #include <QTableWidgetItem>
 #include"files.h"
 #include"correctpage.h"
+#include<QtNetwork/QNetworkAccessManager>
 QString MainWindow::output;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -101,35 +102,12 @@ void MainWindow::on_updateButton_clicked()
     files.updateFile(filePath,updatedText);
 }
 
-void MainWindow::on_pushButton_3_clicked()
-{
-    string word = ui->lineEdit->text().toStdString();
-    int frequency = paragraph.SearchForWordFrequncy(word);
-    ui->label_4->setText(QString::number(frequency));
-    int order = paragraph.SearchForWordOrder(word);
-    ui->label_5->setText(QString::number(order));
-
-    if(frequency == 0 && order == 0)
-    {
-        QStringList temp = paragraph.SplitParagrah(ui->plainTextEdit->toPlainText());
-
-        CorrectPage *secondWindow = new CorrectPage();
-      //  secondWindow->getWord(corrected);
-        secondWindow->get_Data(temp,word);
-        secondWindow->show();
-        ui->lineEdit->setText(secondWindow->setWord());
-    }
-}
 void MainWindow::on_listView_clicked(const QModelIndex &index)
 {
     QString selectedWord = index.data().toString();
     ui->lineEdit->setText(selectedWord);
 }
 
-void MainWindow::on_translateButton_clicked()
-{
-
-}
 
 void MainWindow::on_plainTextEdit_textChanged()
 {
@@ -175,3 +153,23 @@ void MainWindow::on_listView_2_clicked(const QModelIndex &index)
     ui->plainTextEdit->insertPlainText(selectedWord);
 
 }
+
+void MainWindow::on_search_button_clicked()
+{
+    string word = ui->lineEdit->text().toStdString();
+    int frequency = paragraph.SearchForWordFrequncy(word);
+    ui->label_4->setText(QString::number(frequency));
+    int order = paragraph.SearchForWordOrder(word);
+    ui->label_5->setText(QString::number(order));
+    
+    if(frequency == 0 && order == 0)
+    {
+        QStringList temp = paragraph.SplitParagrah(ui->plainTextEdit->toPlainText());
+        
+        CorrectPage *secondWindow = new CorrectPage();
+        secondWindow->get_Data(temp,word);
+        secondWindow->show();
+        ui->lineEdit->setText(secondWindow->setWord());
+    }
+}
+

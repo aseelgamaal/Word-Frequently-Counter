@@ -33,9 +33,7 @@ private slots:
 
     void on_updateButton_clicked();
 
-    void on_translateButton_clicked();
-
-    void on_pushButton_3_clicked();
+    void on_search_button_clicked();
 
     void on_listView_clicked(const QModelIndex &index);
     void on_plainTextEdit_textChanged();
