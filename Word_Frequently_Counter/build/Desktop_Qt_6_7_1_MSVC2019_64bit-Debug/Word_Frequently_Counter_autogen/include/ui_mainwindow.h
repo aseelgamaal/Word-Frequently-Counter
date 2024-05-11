@@ -36,7 +36,7 @@ public:
     QLineEdit *lineEdit;
     QTableWidget *tableWidget;
     QLabel *label;
-    QPushButton *pushButton_3;
+    QPushButton *search_button;
     QPushButton *pushButton_4;
     QWidget *layoutWidget;
     QGridLayout *gridLayout;
@@ -108,9 +108,9 @@ public:
         font2.setPointSize(22);
         font2.setBold(true);
         label->setFont(font2);
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(1030, 470, 71, 41));
+        search_button = new QPushButton(centralwidget);
+        search_button->setObjectName("search_button");
+        search_button->setGeometry(QRect(1030, 470, 71, 41));
         pushButton_4 = new QPushButton(centralwidget);
         pushButton_4->setObjectName("pushButton_4");
         pushButton_4->setGeometry(QRect(830, 410, 271, 51));
@@ -297,7 +297,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
         ___qtablewidgetitem1->setText(QCoreApplication::translate("MainWindow", "Frequency", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Word Frequently Counter", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
+        search_button->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "Calculate Freqency", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Order", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Frequency", nullptr));

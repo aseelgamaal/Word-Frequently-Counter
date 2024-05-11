@@ -2,7 +2,7 @@
 #define PARAGRAPH_H
 
 #include <QString>
-#include <map>
+#include <unordered_map>
 #include<set>
 using namespace std;
 
@@ -14,8 +14,8 @@ private:
 
 public:
     Paragraph();
-    map<string,int>wordFrequency;
-    map<string,int>wordTotalFrequency;
+    unordered_map<string,int>wordFrequency;
+    unordered_map<string,int>wordTotalFrequency;
     void CalculateFrequency(QStringList wordsList);
     QStringList SplitParagrah(const QString &text);
     vector<pair<string, int>> SortByFrequency(int choice);

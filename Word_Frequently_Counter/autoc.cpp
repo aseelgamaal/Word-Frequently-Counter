@@ -14,10 +14,15 @@ void AutoC :: autoComplete(string text,set<string>&filteredList,set<string>&data
         pattern += tolower(text[i]);
        for (auto word:dataSet) {
            string match = word.substr(0, i+1);
-           if (pattern == match) {
+           string lowerWord = "";
+           for (char ch: match)
+           {
+               lowerWord += tolower(ch);
+           }
+           if (pattern == lowerWord) {
                 filteredList.insert(word);
            }
-           else if(pattern != match && !(filteredList.empty())){
+           else if(pattern != lowerWord && !(filteredList.empty())){
                filteredList.erase(word);
            }
        }
@@ -32,7 +37,7 @@ void AutoC :: autoCorrect(string word,set<string>&dataset , string &corrected){
           int counter = 0;
          int  minLength = min(word.size(), x.size());
           for (int i = 0; i < minLength; i++){
-              if(word[i] == x[i]){
+             if(tolower(word[i]) == tolower(x[i])){
                   counter++;
               }
           }

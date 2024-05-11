@@ -84,7 +84,7 @@
      <string>Word Frequently Counter</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="search_button">
     <property name="geometry">
      <rect>
       <x>1030</x>
